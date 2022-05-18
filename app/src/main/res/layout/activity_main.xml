@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="5dp"
+        android:text="@string/main_question"
+        app:layout_constraintEnd_toStartOf="@+id/rgAnswers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rgAnswers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="26dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvQuestion"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rbDisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/disk"
+            app:layout_constraintBottom_toTopOf="@+id/rbSphere"
+            app:layout_constraintStart_toStartOf="@+id/rbSphere" />
+
+        <RadioButton
+            android:id="@+id/rbSphere"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sphere"
+            app:layout_constraintBottom_toTopOf="@+id/rbEllipsoid"
+            app:layout_constraintStart_toStartOf="@+id/rbEllipsoid" />
+
+        <RadioButton
+            android:id="@+id/rbEllipsoid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ellipsoid"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioButton
+            android:id="@+id/rbCube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cube"
+            app:layout_constraintStart_toStartOf="@+id/rbEllipsoid"
+            app:layout_constraintTop_toBottomOf="@+id/rbEllipsoid" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/butAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="@string/main_button_name"
+        app:layout_constraintStart_toStartOf="@+id/rgAnswers"
+        app:layout_constraintTop_toBottomOf="@+id/rgAnswers" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="@+id/tvQuestion"
+        app:layout_constraintTop_toBottomOf="@+id/tvQuestion" />
+
+</android.support.constraint.ConstraintLayout>

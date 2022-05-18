@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="main_question">What shape is the Earth?</string>
+    <string name="disk">Disk</string>
+    <string name="sphere">Sphere</string>
+    <string name="ellipsoid">Ellipsoid</string>
+    <string name="cube">Cube</string>
+    <string name="main_button_name">Reply</string>
+</resources>
